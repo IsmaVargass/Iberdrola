@@ -1,0 +1,89 @@
+body {
+    font-family: 'Georgia', serif;
+    background-color: #03a746;
+    color: #3e2723;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+header {
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #03a746;
+    background-size: 200% 100%;
+}
+
+@keyframes waveGradient {
+    0% { background-position: -200% 0; }
+    50% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+nav {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #d7ccc8;
+}
+
+.productos {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 2rem auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.producto {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    background: #f8f5f0;
+    border-radius: 5px;
+}
+
+button {
+    background: #ac825c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #db7311;
+}
+
+footer {
+    background-color: #5d4037;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
