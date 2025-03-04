@@ -1,89 +1,181 @@
-body {
-    font-family: 'Georgia', serif;
-    background-color: #03a746;
-    color: #3e2723;
+/* Reseteo básico */
+* {
     margin: 0;
     padding: 0;
-    text-decoration: none;
+    box-sizing: border-box;
 }
 
+/* Efecto de desvanecimiento en la carga */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f4f5;
+    color: #333;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+/* Animación fadeIn */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Header */
 header {
+    background-color: #006837;
     color: white;
+    padding: 1.5rem;
     text-align: center;
-    padding: 2rem 1rem;
-    background-color: #03a746;
-    background-size: 200% 100%;
+    transform: translateY(-30px);
+    animation: slideIn 1s ease-out forwards;
 }
 
-@keyframes waveGradient {
-    0% { background-position: -200% 0; }
-    50% { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
+@keyframes slideIn {
+    0% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
-nav {
-    text-align: center;
-    padding: 1rem 0;
+header h1 {
+    font-size: 2rem;
 }
 
+/* Navegación */
 nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 20px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #fff;
-    font-size: 1.1rem;
-    padding: 10px 15px;
-    position: relative;
-    transition: color 0.3s ease;
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #d7ccc8;
+    color: #f7d205;
 }
 
+/* Efecto de aparición al hacer scroll */
+.importancia,
 .productos {
-    display: grid;
-    gap: 20px;
-    padding: 20px;
-    max-width: 800px;
-    margin: 2rem auto;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease-out forwards;
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.importancia {
     background: #fff;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 800px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Productos */
+.productos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .producto {
-    border: 1px solid #ddd;
-    padding: 15px;
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
     text-align: center;
-    background: #f8f5f0;
-    border-radius: 5px;
+    max-width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.producto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón con efecto */
 button {
-    background: #ac825c;
+    background-color: #0077B6;
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 12px 20px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
-    background: #db7311;
+    background-color: #005f87;
+    transform: scale(1.05);
 }
 
+/* Footer */
 footer {
-    background-color: #ff9d15;
-    color: #fff;
+    background-color: #006837;
+    color: white;
     text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
+    padding: 1.5rem;
+    opacity: 0;
+    animation: fadeInFooter 1.5s ease-in-out 1s forwards;
+}
+
+@keyframes fadeInFooter {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+footer p {
+    font-size: 1.2rem;
+}
+
+/* Social media icons */
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icons i {
+    color: #E1306C;
+    transition: transform 0.3s ease;
+}
+
+.social-icons i:hover {
+    transform: scale(1.2);
 }
