@@ -172,10 +172,19 @@ footer p {
 }
 
 .social-icons i {
-    color: #E1306C;
+    color: #ffffff;
     transition: transform 0.3s ease;
 }
 
 .social-icons i:hover {
     transform: scale(1.2);
 }
+
+
+img {
+    width: 150px;
+    height: auto;
+    padding-bottom: 40px;
+}
+
+
