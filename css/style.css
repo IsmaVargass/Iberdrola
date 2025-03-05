@@ -1,180 +1,235 @@
-/* Estilos generales */
-body {
-    width: 100%;
-    font-family: Arial, sans-serif;
+/* Reset básico */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-}
-
-/* Contenedor principal */
-.container {
-    width: 100%;
-    background: white;
-}
-
-/* Estilos para el encabezado */
-header {
-    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  /* Fuente y estilo global */
+  body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Encabezado y navegación */
+  header {
+    background: #0056a3;
+    color: #fff;
     padding: 20px;
-    background: #007bff;
-    color: white;
-    animation: fadeIn 1s ease-in-out;
-}
-
-/* Barra de navegación con bordes redondeados y efecto hover */
-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  
+  header .logo h1 {
+    font-size: 24px;
+  }
+  
+  /* Menú tradicional */
+  .desktop-menu ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .desktop-menu ul li {
+    margin-left: 20px;
+  }
+  
+  .desktop-menu ul li a {
+    color: #fff;
+    text-decoration: none;
     font-weight: bold;
-    padding: 10px;
-    border-radius: 25px;
-    display: inline-block;
-    margin-top: 10px;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-
-/* Efecto de opacidad al pasar el ratón sobre nav */
-nav:hover {
-    transform: scale(1.01);
-}
-
-nav ul {
+  }
+  
+  /* Checkbox oculto para el menú móvil */
+  #menu-toggle {
+    display: none;
+  }
+  
+  /* Icono de menú (hamburguesa / X) */
+  .menu-icon {
+    cursor: pointer;
+    display: block;
+    width: 30px;
+    height: 25px;
+    position: relative;
+    z-index: 1001;
+  }
+  
+  .menu-icon span {
+    background: #fff;
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    transition: all 0.3s ease;
+  }
+  
+  .menu-icon span:nth-child(1) {
+    top: 0;
+  }
+  
+  .menu-icon span:nth-child(2) {
+    top: 10px;
+  }
+  
+  .menu-icon span:nth-child(3) {
+    top: 20px;
+  }
+  
+  /* Transformación del icono al activarse (se convierte en X) */
+  #menu-toggle:checked + .menu-icon span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 10px;
+  }
+  #menu-toggle:checked + .menu-icon span:nth-child(2) {
+    opacity: 0;
+  }
+  #menu-toggle:checked + .menu-icon span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 10px;
+  }
+  
+  /* Menú lateral para dispositivos móviles */
+  .side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Oculto por defecto */
+    width: 250px;
+    height: 100%;
+    background: #0056a3;
+    transition: left 0.3s ease;
+    padding: 60px 20px;
+    z-index: 1000;
+  }
+  
+  #menu-toggle:checked ~ .side-menu {
+    left: 0;
+  }
+  
+  .side-menu ul {
     list-style: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline;
-}
-
-/* Estilos del nav con hover en amarillo */
-nav ul li a {
+  }
+  
+  .side-menu ul li {
+    margin-bottom: 20px;
+  }
+  
+  .side-menu ul li a {
+    color: #fff;
     text-decoration: none;
-    color: black;
     font-size: 18px;
-    padding: 10px 15px;
-    border-radius: 15px;
-    transition: color 0.3s ease, background 0.3s ease, transform 0.2s;
-}
-
-/* Cambio de color al pasar el cursor */
-nav ul li a:hover {
-    color: #FFC107;
-    background: rgba(255, 255, 255, 0.2);
-    transform: scale(1.1);
-}
-
-/* Sección de productos con CSS Grid */
-.productos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
-}
-
-/* Estilos para cada producto con animación de entrada */
-.producto {
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+  }
+  
+  /* Alerta de ofertas */
+  #alerta {
+    background: #ffc107;
+    color: #000;
     text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease forwards;
-}
-
-/* Efecto de sombra y escala al pasar el ratón sobre los productos */
-.producto:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-.producto img {
+    padding: 10px;
+  }
+  
+  /* Sección hero */
+  .hero {
+    background: #fff;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .hero img {
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
-}
-
-.producto h2 {
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-.producto p {
-    font-size: 16px;
-    color: #555;
-}
-
-/* Botones con efecto hover y escala */
-.producto button {
-    background: #28a745;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+  
+  /* Secciones de productos y promociones */
+  .productos, .promociones {
+    padding: 40px;
+    background: #fff;
+    margin: 20px auto;
+    max-width: 1200px;
+  }
+  
+  .productos h2, .promociones h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Grid para productos */
+  .producto-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .producto {
+    background: #f9f9f9;
+    padding: 20px;
+    flex: 1 1 300px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .producto img {
+    max-width: 80%;
     border-radius: 5px;
-    transition: background 0.3s ease, transform 0.2s;
-}
-
-.producto button:hover {
-    background: #218838;
-    transform: scale(1.1);
-}
-
-/* Pie de página con colores de Iberdrola */
-footer {
+  }
+  
+  /* Anuncio de promociones */
+  .anuncio {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .anuncio img {
+    flex: 1 1 300px;
+    max-width: 20%;
+    border-radius: 5px;
+  }
+  
+  .detalle-anuncio {
+    flex: 2 1 400px;
+  }
+  
+  /* Pie de página */
+  footer {
+    background: #333;
+    color: #fff;
     text-align: center;
     padding: 20px;
-    background: #004B23;
-    color: #FFC107;
     margin-top: 20px;
-}
-
-footer p {
-    margin: 0;
-    font-size: 16px;
-}
-
-/* Estilos para los iconos sociales */
-.social-icons a {
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-.social-icons i {
-    font-size: 2rem;
-    color: #FFC107;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-/* Efecto hover en iconos sociales */
-.social-icons i:hover {
-    color: #ffffff;
-    transform: scale(1.2);
-}
-
-/* Animaciones */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
+  }
+  
+  /* Estilos responsivos */
+  @media(min-width: 768px) {
+    /* En pantallas grandes se oculta el icono y menú móvil */
+    .menu-icon {
+      display: none;
     }
-    to {
-        opacity: 1;
+    .side-menu {
+      display: none;
     }
-}
+    .desktop-menu {
+      display: block;
+    }
+  }
+  
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+
+  
