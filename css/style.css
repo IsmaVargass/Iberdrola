@@ -1,190 +1,180 @@
-/* Reseteo básico */
-* {
+/* Estilos generales */
+body {
+    width: 100%;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #f4f4f4;
 }
 
-/* Efecto de desvanecimiento en la carga */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f3f4f5;
-    color: #333;
-    opacity: 0;
-    animation: fadeIn 1.5s ease-in-out forwards;
+/* Contenedor principal */
+.container {
+    width: 100%;
+    background: white;
 }
 
-/* Animación fadeIn */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-/* Header */
+/* Estilos para el encabezado */
 header {
-    background-color: #006837;
-    color: white;
-    padding: 1.5rem;
     text-align: center;
-    transform: translateY(-30px);
-    animation: slideIn 1s ease-out forwards;
+    padding: 20px;
+    background: #007bff;
+    color: white;
+    animation: fadeIn 1s ease-in-out;
 }
 
-@keyframes slideIn {
-    0% {
-        transform: translateY(-30px);
-    }
-    100% {
-        transform: translateY(0);
-    }
+/* Barra de navegación con bordes redondeados y efecto hover */
+nav {
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 25px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
-header h1 {
-    font-size: 2rem;
+/* Efecto de opacidad al pasar el ratón sobre nav */
+nav:hover {
+    transform: scale(1.01);
 }
 
-/* Navegación */
 nav ul {
     list-style: none;
+    padding: 0;
     display: flex;
     justify-content: center;
     gap: 20px;
+    margin: 0;
 }
 
+nav ul li {
+    display: inline;
+}
+
+/* Estilos del nav con hover en amarillo */
 nav ul li a {
     text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
-    transition: color 0.3s;
+    color: black;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 15px;
+    transition: color 0.3s ease, background 0.3s ease, transform 0.2s;
 }
 
+/* Cambio de color al pasar el cursor */
 nav ul li a:hover {
-    color: #f7d205;
+    color: #FFC107;
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
 }
 
-/* Efecto de aparición al hacer scroll */
-.importancia,
+/* Sección de productos con CSS Grid */
 .productos {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeUp 1s ease-out forwards;
-}
-
-@keyframes fadeUp {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.importancia {
-    background: #fff;
-    padding: 30px;
-    margin: 20px auto;
-    max-width: 800px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Productos */
-.productos {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    flex-wrap: wrap;
     padding: 20px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilos para cada producto con animación de entrada */
 .producto {
-    background: #f0f0f0;
-    padding: 20px;
-    border-radius: 8px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    max-width: 250px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
 }
 
+/* Efecto de sombra y escala al pasar el ratón sobre los productos */
 .producto:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Botón con efecto */
-button {
-    background-color: #0077B6;
+.producto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.producto h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.producto p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Botones con efecto hover y escala */
+.producto button {
+    background: #28a745;
     color: white;
     border: none;
-    padding: 12px 20px;
+    padding: 10px 15px;
+    font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
-    font-size: 1rem;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background 0.3s ease, transform 0.2s;
 }
 
-button:hover {
-    background-color: #005f87;
-    transform: scale(1.05);
+.producto button:hover {
+    background: #218838;
+    transform: scale(1.1);
 }
 
-/* Footer */
+/* Pie de página con colores de Iberdrola */
 footer {
-    background-color: #006837;
-    color: white;
     text-align: center;
-    padding: 1.5rem;
-    opacity: 0;
-    animation: fadeInFooter 1.5s ease-in-out 1s forwards;
-}
-
-@keyframes fadeInFooter {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+    padding: 20px;
+    background: #004B23;
+    color: #FFC107;
+    margin-top: 20px;
 }
 
 footer p {
-    font-size: 1.2rem;
+    margin: 0;
+    font-size: 16px;
 }
 
-/* Social media icons */
-.social-icons {
-    margin-top: 10px;
-}
-
+/* Estilos para los iconos sociales */
 .social-icons a {
     margin: 0 10px;
     text-decoration: none;
 }
 
 .social-icons i {
-    color: #ffffff;
-    transition: transform 0.3s ease;
+    font-size: 2rem;
+    color: #FFC107;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
+/* Efecto hover en iconos sociales */
 .social-icons i:hover {
+    color: #ffffff;
     transform: scale(1.2);
 }
 
-
-img {
-    width: 150px;
-    height: auto;
-    padding-bottom: 40px;
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
