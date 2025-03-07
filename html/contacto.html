@@ -1,10 +1,10 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reventa de Bombillas - Tienda Online</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Reventa de Bombillas - Contacto</title>
+  <link rel="stylesheet" href="../css/stylecontacto.css">
   <!-- Fuente Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,16 +16,12 @@
     <div class="logo">
       <h1>Reventa de Bombillas - Iberdrola</h1>
     </div>
-    <!-- Checkbox oculto para controlar el menú lateral -->
     <input type="checkbox" id="menu-toggle">
-    <!-- Icono de menú hamburguesa / X -->
     <label for="menu-toggle" class="menu-icon">
       <span></span>
       <span></span>
       <span></span>
     </label>
-    
-    <!-- Menú de escritorio -->
     <nav class="desktop-menu">
       <ul>
         <li><a href="../index.html">Inicio</a></li>
@@ -35,7 +31,14 @@
       </ul>
     </nav>
   </header>
-
+  
+  <!-- Sección de alerta -->
+  <section id="alerta">
+    <div class="alerta">
+      <p>¡Oferta del día! Bombillas LED al 20% de descuento.</p>
+    </div>
+  </section>
+  
   <!-- Menú lateral para móviles -->
   <nav class="side-menu">
     <ul>
@@ -45,28 +48,38 @@
       <li><a href="../html/contacto.html">Contacto</a></li>
     </ul>
   </nav>
-
-  <!-- Sección de alerta -->
-  <section id="alerta">
-    <div class="alerta">
-      <p>¡Oferta del día! Bombillas LED al 20% de descuento.</p>
-    </div>
-  </section>
-
+  
   <!-- Contenido principal -->
   <main>
-    <!-- Sección de bienvenida / hero -->
-    <section id="inicio" class="hero">
-      <h2>Bienvenido a la Tienda Online de Bombillas</h2>
-      <p>Descubre la mejor calidad y precios para iluminar tu hogar y negocio.</p>
-      <img src="img/header1.jpg" alt="Iluminación moderna">
+    <section class="contacto">
+      <h2>Contacto</h2>
+      <form id="contactForm">
+        <input type="text" name="nombre" placeholder="Tu Nombre" required>
+        <input type="email" name="email" placeholder="Tu Correo" required>
+        <textarea name="mensaje" placeholder="Tu Mensaje" rows="4" required></textarea>
+        <button type="submit">Enviar</button>
+        <p id="mensajeExito" style="display: none; color: green;">¡Mensaje enviado con éxito!</p>
+      </form>
+      <div class="social-links">
+        <h3>Síguenos en redes sociales</h3>
+        <a href="https://x.com/iberdrola" target="_blank">X</a> |
+        <a href="https://www.facebook.com/Iberdrola" target="_blank">Facebook</a> |
+        <a href="https://instagram.com/iberdrola" target="_blank">Instagram</a>
+      </div>
     </section>
-
   </main>
-
+  
   <!-- Pie de página -->
   <footer>
     <p>&copy; 2025 Reventa de Bombillas. Todos los derechos reservados.</p>
   </footer>
+  
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      document.getElementById('mensajeExito').style.display = 'block';
+      this.reset();
+    });
+  </script>
 </body>
 </html>
