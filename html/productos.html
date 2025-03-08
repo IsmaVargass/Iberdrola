@@ -1,21 +1,34 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reventa de Bombillas - Productos</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/styleproducto.css">
   <!-- Fuente Google Fonts -->
+  <link rel="shortcut icon" href="../img/icono.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
   <!-- Encabezado y navegación -->
   <header>
-    <div class="logo">
-      <h1>Reventa de Bombillas - Iberdrola</h1>
-    </div>
+      <div class="logo">
+        <img src="../img/logoIber.svg" alt="Logo Iberdrola">
+      </div>
     <!-- Checkbox oculto para controlar el menú lateral -->
     <input type="checkbox" id="menu-toggle">
     <!-- Icono de menú hamburguesa / X -->
@@ -59,47 +72,358 @@
     <section id="inicio" class="hero">
       <h2>Bienvenido a la Tienda Online de Bombillas</h2>
       <p>Descubre la mejor calidad y precios para iluminar tu hogar y negocio.</p>
-      <img src="img/header1.jpg" alt="Iluminación moderna">
     </section>
 
     <!-- Sección de productos -->
     <section id="productos" class="productos">
       <h2>Nuestros Productos</h2>
       <div class="producto-grid">
+        <!-- Producto 1 -->
         <article class="producto">
-          <img src="img/bombilla_05W.jpg" alt="Bombilla LED 5W">
+          <img src="../img/bombilla_05W.jpg" alt="Bombilla LED 5W">
           <h3>Bombilla LED 5W</h3>
           <p>Alta eficiencia y larga duración.</p>
+
+          <!-- Contenedor para los botones -->
+          <div class="button-container">
+            <!-- Botón para abrir el modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalProducto1">
+              Más Información
+            </button>
+            <!-- Botón de compra -->
+            <button type="button" class="btn btn-success">
+              Comprar Ahora
+            </button>
+          </div>
+
+          <!-- Modal para el Producto 1 -->
+          <div class="modal fade" id="modalProducto1" tabindex="-1" role="dialog" aria-labelledby="modalProducto1Title" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalProducto1Title">Bombilla LED 5W</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Esta bombilla ofrece un bajo consumo de energía, ideal para mantener tu hogar iluminado de manera económica.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </article>
+
+        <!-- Producto 2 -->
         <article class="producto">
-          <img src="img/bombilla_08W.jpg" alt="Bombilla LED 8W">
+          <img src="../img/bombilla_08W.jpg" alt="Bombilla LED 8W">
           <h3>Bombilla LED 8W</h3>
           <p>Ideal para iluminar cualquier espacio.</p>
+
+          <!-- Contenedor para los botones -->
+          <div class="button-container">
+            <!-- Botón para abrir el modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalProducto2">
+              Más Información
+            </button>
+            <!-- Botón de compra -->
+            <button type="button" class="btn btn-success">
+              Comprar Ahora
+            </button>
+          </div>
+
+          <!-- Modal para el Producto 2 -->
+          <div class="modal fade" id="modalProducto2" tabindex="-1" role="dialog" aria-labelledby="modalProducto2Title" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalProducto2Title">Bombilla LED 8W</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  La bombilla de 8W es perfecta para oficinas o habitaciones, proporcionando una luz cálida y eficiente.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </article>
+
+        <!-- Producto 3 -->
         <article class="producto">
-          <img src="img/bombilla_10W.jpg" alt="Bombilla LED 10W">
+          <img src="../img/bombilla_08W.jpg" alt="Bombilla LED 10W">
           <h3>Bombilla LED 10W</h3>
           <p>Potente y eficiente.</p>
+
+          <!-- Contenedor para los botones -->
+          <div class="button-container">
+            <!-- Botón para abrir el modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalProducto3">
+              Más Información
+            </button>
+            <!-- Botón de compra -->
+            <button type="button" class="btn btn-success">
+              Comprar Ahora
+            </button>
+          </div>
+
+          <!-- Modal para el Producto 3 -->
+          <div class="modal fade" id="modalProducto3" tabindex="-1" role="dialog" aria-labelledby="modalProducto3Title" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalProducto3Title">Bombilla LED 10W</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  La bombilla de 10W es ideal para grandes espacios, con una luminosidad superior y bajo consumo.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </article>
+
+        <!-- Producto 4 -->
+        <article class="producto">
+          <img src="../img/bombilla_08W.jpg" alt="Bombilla LED 12W">
+          <h3>Bombilla LED 12W</h3>
+          <p>Mayor luminosidad, mayor ahorro.</p>
+          <div class="button-container">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalProducto4">
+              Más Información
+            </button>
+            <button type="button" class="btn btn-success">
+              Comprar Ahora
+            </button>
+          </div>
+          <div class="modal fade" id="modalProducto4" tabindex="-1" role="dialog" aria-labelledby="modalProducto4Title" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalProducto4Title">Bombilla LED 12W</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  La bombilla de 12W es ideal para salones y oficinas grandes, proporcionando una luz brillante y eficiente.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Producto 5 -->
+        <article class="producto">
+          <img src="../img/bombilla_08W.jpg" alt="Bombilla LED 15W">
+          <h3>Bombilla LED 15W</h3>
+          <p>Para espacios más amplios.</p>
+          <div class="button-container">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalProducto5">
+              Más Información
+            </button>
+            <button type="button" class="btn btn-success">
+              Comprar Ahora
+            </button>
+          </div>
+          <div class="modal fade" id="modalProducto5" tabindex="-1" role="dialog" aria-labelledby="modalProducto5Title" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalProducto5Title">Bombilla LED 15W</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Esta bombilla es ideal para salones grandes y espacios comerciales, garantizando máxima eficiencia.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Producto 6 -->
+        <article class="producto">
+          <img src="../img/bombilla_08W.jpg" alt="Bombilla LED 20W">
+          <h3>Bombilla LED 20W</h3>
+          <p>Máxima luminosidad.</p>
+          <div class="button-container">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalProducto6">
+              Más Información
+            </button>
+            <button type="button" class="btn btn-success">
+              Comprar Ahora
+            </button>
+          </div>
+          <div class="modal fade" id="modalProducto6" tabindex="-1" role="dialog" aria-labelledby="modalProducto6Title" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalProducto6Title">Bombilla LED 20W</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Bombilla de 20W con tecnología LED para espacios muy grandes, con una gran eficiencia energética.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+<!-- Producto 7 -->
+<article class="producto">
+  <img src="../img/bombilla_08W.jpg" alt="Bombilla LED 20W">
+  <h3>Bombilla LED 20W</h3>
+  <p>Máxima luminosidad.</p>
+  <div class="button-container">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalProducto6">
+      Más Información
+    </button>
+    <button type="button" class="btn btn-success">
+      Comprar Ahora
+    </button>
+  </div>
+  <div class="modal fade" id="modalProducto6" tabindex="-1" role="dialog" aria-labelledby="modalProducto6Title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalProducto6Title">Bombilla LED 20W</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Bombilla de 20W con tecnología LED para espacios muy grandes, con una gran eficiencia energética.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- Producto 8 -->
+<article class="producto">
+  <img src="../img/bombilla_20W.jpg" alt="Bombilla LED 20W">
+  <h3>Bombilla LED 20W</h3>
+  <p>Máxima luminosidad.</p>
+  <div class="button-container">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalProducto6">
+      Más Información
+    </button>
+    <button type="button" class="btn btn-success">
+      Comprar Ahora
+    </button>
+  </div>
+  <div class="modal fade" id="modalProducto6" tabindex="-1" role="dialog" aria-labelledby="modalProducto6Title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalProducto6Title">Bombilla LED 20W</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Bombilla de 20W con tecnología LED para espacios muy grandes, con una gran eficiencia energética.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- Producto 9 -->
+<article class="producto">
+  <img src="../img/bombilla_20W.jpg" alt="Bombilla LED 20W">
+  <h3>Bombilla LED 20W</h3>
+  <p>Máxima luminosidad.</p>
+  <div class="button-container">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalProducto6">
+      Más Información
+    </button>
+    <button type="button" class="btn btn-success">
+      Comprar Ahora
+    </button>
+  </div>
+  <div class="modal fade" id="modalProducto6" tabindex="-1" role="dialog" aria-labelledby="modalProducto6Title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalProducto6Title">Bombilla LED 20W</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Bombilla de 20W con tecnología LED para espacios muy grandes, con una gran eficiencia energética.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
       </div>
     </section>
 
-    <!-- Sección de promociones / anuncios -->
-    <section id="promociones" class="promociones">
-      <h2>Promociones</h2>
-      <div class="anuncio">
-        <img src="img/bombilla_12W.jpg" alt="Promoción Especial">
-        <div class="detalle-anuncio">
-          <h3>Promoción Especial</h3>
-          <p>Compra 3 y llévate 1 gratis. Oferta por tiempo limitado.</p>
-        </div>
-      </div>
-    </section>
   </main>
 
   <!-- Pie de página -->
   <footer>
-    <p>&copy; 2025 Reventa de Bombillas. Todos los derechos reservados.</p>
+    <img class="footer" src="../img/IberdrolaLanding.svg" alt="Imagen 6">
+    <p>&copy; 2025 Iberdrola Clientes S.A.U. Todos los derechos reservados.</p>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const modal = document.getElementById("miModal"); // Asegúrate de poner el ID correcto
+  
+      modal.addEventListener("hide.bs.modal", function (event) {
+        event.preventDefault(); // Evita el cierre inmediato
+        modal.classList.add("modal-closing"); // Agrega la clase de cierre
+  
+        setTimeout(() => {
+          modal.classList.remove("modal-closing");
+          bootstrap.Modal.getInstance(modal).hide(); // Ahora sí cierra el modal
+        }, 600); // Debe coincidir con la duración de la animación (0.6s)
+      });
+    });
+  </script>
+  
+
 </body>
 </html>

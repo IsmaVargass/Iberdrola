@@ -1,0 +1,301 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Encabezado y navegación */
+  header {
+    background: #f4f4f4;
+    color: #00a444;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  
+  .logo {
+    display: flex;
+  }
+  
+  .logo h1 {
+    font-size: 24px;
+    padding: 0 10px;
+  }
+  
+  /* Menú tradicional */
+  .desktop-menu ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .desktop-menu ul li {
+    margin-left: 20px;
+  }
+  
+  .desktop-menu ul li a {
+    color: #00a444;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Checkbox oculto para el menú móvil */
+  #menu-toggle {
+    display: none;
+  }
+  
+  /* Icono de menú (hamburguesa / X) */
+  .menu-icon {
+    cursor: pointer;
+    display: block;
+    width: 30px;
+    height: 25px;
+    position: relative;
+    z-index: 1001;
+  }
+  
+  .menu-icon span {
+    background: #00a444;
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    transition: all 0.3s ease;
+  }
+  
+  .menu-icon span:nth-child(1) { top: 0; }
+  .menu-icon span:nth-child(2) { top: 10px; }
+  .menu-icon span:nth-child(3) { top: 20px; }
+  
+  /* Transformación del icono al activarse */
+  #menu-toggle:checked + .menu-icon span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 10px;
+  }
+  #menu-toggle:checked + .menu-icon span:nth-child(2) {
+    opacity: 0;
+  }
+  #menu-toggle:checked + .menu-icon span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 10px;
+  }
+  
+  /* Menú lateral para dispositivos móviles */
+  .side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #003f2a;
+    transition: left 0.3s ease;
+    padding: 60px 20px;
+    z-index: 1000;
+  }
+  
+  #menu-toggle:checked ~ .side-menu {
+    left: 0;
+  }
+  
+  .side-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .side-menu ul li {
+    margin-bottom: 20px;
+  }
+  
+  .side-menu ul li a {
+    color: #00a444;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Alerta de ofertas */
+  #alerta {
+    background: #003f2a;
+    color: #f4f4f4;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* Sección hero */
+  .hero {
+    background: #fff;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  /* Secciones de productos y promociones */
+  .productos, .promociones {
+    padding: 40px;
+    background: #fff;
+    margin: 20px auto;
+    max-width: 1200px;
+  }
+  
+  .productos h2, .promociones h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Grid para productos */
+  .producto-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .producto {
+    background: #f9f9f9;
+    padding: 20px;
+    flex: 1 1 300px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .producto img {
+    max-width: 80%;
+    border-radius: 5px;
+  }
+  
+  /* Anuncio de promociones */
+  .anuncio {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .anuncio img {
+    flex: 1 1 300px;
+    max-width: 20%;
+    border-radius: 5px;
+  }
+  
+  .detalle-anuncio {
+    flex: 2 1 400px;
+  }
+  
+  /* Contenedor principal */
+  main {
+    flex: 1;
+  }
+  
+  /* Pie de página */
+  footer {
+    background: #003f2a;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    font-size: 13px;
+  }
+  
+  footer p {
+    padding-left: 10px;
+    padding-top: 12px;
+  }
+  
+  /* Estilos responsivos */
+  @media(min-width: 768px) {
+    .menu-icon {
+        display: none;
+    }
+    .side-menu {
+        display: none;
+    }
+    .desktop-menu {
+        display: block;
+    }
+  }
+  
+  /* Página de contacto */
+  .contacto {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .contacto form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .contacto input, 
+  .contacto textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  .contacto button {
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .contacto button:hover {
+    background: #0056b3;
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.6);
+  }
+  
+  .contacto button:active {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.4);
+  }
+  
+  /* Imágenes deslizantes */
+  .image-container {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 40px;
+  }
+  
+  .image {
+    width: calc(100% - 20px);
+    margin-right: 20px;
+    flex-shrink: 0;
+    animation: slide 30s linear infinite;
+    border-radius: 40px;
+  }
+  
+  @keyframes slide {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-100%); }
+    40% { transform: translateX(-200%); }
+    60% { transform: translateX(-300%); }
+    80% { transform: translateX(-400%); }
+    100% { transform: translateX(-500%); }
+  }
+  

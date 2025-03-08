@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
   }
   
   /* Fuente y estilo global */
@@ -15,8 +16,8 @@
   
   /* Encabezado y navegación */
   header {
-    background: #0056a3;
-    color: #fff;
+    background: #f4f4f4;
+    color: #00a444;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -28,6 +29,17 @@
   header .logo h1 {
     font-size: 24px;
   }
+
+  .logo {
+    display: flex
+  }
+
+  .logo h1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+
   
   /* Menú tradicional */
   .desktop-menu ul {
@@ -40,7 +52,7 @@
   }
   
   .desktop-menu ul li a {
-    color: #fff;
+    color: #00a444;
     text-decoration: none;
     font-weight: bold;
   }
@@ -61,7 +73,7 @@
   }
   
   .menu-icon span {
-    background: #fff;
+    background: #00a444;
     display: block;
     position: absolute;
     height: 3px;
@@ -122,7 +134,7 @@
   }
   
   .side-menu ul li a {
-    color: #fff;
+    color: #00a444;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
@@ -130,8 +142,8 @@
   
   /* Alerta de ofertas */
   #alerta {
-    background: #ffc107;
-    color: #000;
+    background: #003f2a;
+    color: #f4f4f9;
     text-align: center;
     padding: 10px;
   }
@@ -141,14 +153,113 @@
     background: #fff;
     padding: 40px;
     text-align: center;
+    padding-right: 40px;
+
   }
+
+  #inicio p {
+    padding-bottom: 2em;
   
-  .hero img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 20px;
-    border-radius: 10px;
   }
+
+  #inicio span {
+    color:#0056a3
+  }
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+h2, h3 {
+  color: #2d6a4f;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Section Styles */
+.commitment {
+  padding: 50px 0;
+  background-color: #ffffff;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1b5e20;
+}
+
+.intro-text {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.feature {
+  background-color: #e8f5e9;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.feature-title {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.feature-text {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      width: 90%;
+  }
+  .section-title {
+      font-size: 2em;
+  }
+  .intro-text {
+      font-size: 1em;
+  }
+}
+
+
   
   /* Secciones de productos y promociones */
   .productos, .promociones {
@@ -209,13 +320,23 @@
   
   /* Pie de página */
   footer {
-    background: #333;
-    color: #fff;
+    background: #003f2a;
+    color: #ffffff;
+    text-shadow: #000;
     text-align: center;
     padding: 20px;
     margin-top: 20px;
+    display: flex;
+    font-size: 13px;
+
   }
   
+  footer p {
+    
+    padding-left: 10px;
+    padding-top: 12px;
+  }
+
   /* Estilos responsivos */
   @media(min-width: 768px) {
     /* En pantallas grandes se oculta el icono y menú móvil */
@@ -229,6 +350,50 @@
       display: block;
     }
   }
+  
+
+  .image-container {
+    width: 60%; height: auto; object-fit: cover
+
+  }
+
+  .image-container {
+    display: flex;
+    overflow: hidden;
+    width: 100%; /* Ajusta el ancho según lo necesites */
+    border-radius: 40px;
+  }
+  
+  .image {
+    width: calc(100% - 20px); /* Ajusta el ancho de cada imagen para dejar espacio entre ellas */
+    margin-right: 20px; /* Espacio entre las imágenes */
+    flex-shrink: 0; /* No se reducirá el tamaño de las imágenes */
+    animation: slide 30s linear infinite; /* Animación para deslizar las imágenes */
+    border-radius: 40px;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(-100%);
+    }
+    40% {
+      transform: translateX(-200%);
+    }
+    60% {
+      transform: translateX(-300%);
+    }
+    80% {
+      transform: translateX(-400%);
+    }
+    100% {
+      transform: translateX(-500%);
+    }
+  }
+
+
   
 
 

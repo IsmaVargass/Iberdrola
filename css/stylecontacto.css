@@ -5,24 +5,19 @@
   box-sizing: border-box;
 }
 
-/* Fuente y estilo global */
-html, body {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   background: #f4f4f4;
   color: #333;
+  height: 100vh;
+
 }
 
 /* Encabezado y navegación */
 header {
-  background: #0056a3;
-  color: #fff;
+  background: #f4f4f4;
+  color: #00a444;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -35,6 +30,17 @@ header .logo h1 {
   font-size: 24px;
 }
 
+.logo {
+  display: flex
+}
+
+.logo h1 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+
 /* Menú tradicional */
 .desktop-menu ul {
   list-style: none;
@@ -46,7 +52,7 @@ header .logo h1 {
 }
 
 .desktop-menu ul li a {
-  color: #fff;
+  color: #00a444;
   text-decoration: none;
   font-weight: bold;
 }
@@ -67,7 +73,7 @@ header .logo h1 {
 }
 
 .menu-icon span {
-  background: #fff;
+  background: #00a444;
   display: block;
   position: absolute;
   height: 3px;
@@ -108,7 +114,7 @@ header .logo h1 {
   left: -250px; /* Oculto por defecto */
   width: 250px;
   height: 100%;
-  background: #0056a3;
+  background: #003f2a;
   transition: left 0.3s ease;
   padding: 60px 20px;
   z-index: 1000;
@@ -128,7 +134,7 @@ header .logo h1 {
 }
 
 .side-menu ul li a {
-  color: #fff;
+  color: #00a444;
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
@@ -136,8 +142,8 @@ header .logo h1 {
 
 /* Alerta de ofertas */
 #alerta {
-  background: #ffc107;
-  color: #000;
+  background: #003f2a;
+  color: #f4f4f4;
   text-align: center;
   padding: 10px;
 }
@@ -218,13 +224,26 @@ main {
   flex: 1; /* Ocupa el espacio disponible */
 }
 
-/* Pie de página */
-footer {
-  background: #333;
-  color: #fff;
+ /* Pie de página */
+ footer {
+  background: #003f2a;
+  color: #ffffff;
+  text-shadow: #000;
   text-align: center;
   padding: 20px;
-  margin-top: auto;
+  margin-top: 20px;
+  font-size: 13px;
+  
+  display: flex;
+  width: 100%;
+  /* --ESTOS SE PUEDEN QUITAR -- */
+  bottom: 0;
+  position: fixed;
+}
+
+footer p {
+  padding-left: 10px;
+  padding-top: 12px;
 }
 
 /* Estilos responsivos */
@@ -267,10 +286,27 @@ footer {
   background: #007BFF;
   color: white;
   border: none;
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 16px;
+  position: relative;
+  transition: all 0.3s ease; /* Transición suave para todo */
+  overflow: hidden;
 }
+
+.contacto button:hover {
+  background: #0056b3; /* Color más oscuro al hacer hover */
+  transform: scale(1.1); /* Aumento de tamaño */
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.6); /* Sombra para darle profundidad */
+}
+
+/* Agregar un subtítulo de color para dar más énfasis */
+.contacto button:active {
+  transform: scale(1.05); /* Reduce el tamaño ligeramente cuando se presiona */
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.4); /* Sombra más suave al presionar */
+}
+
 
 .contacto .social-links {
   margin-top: 20px;

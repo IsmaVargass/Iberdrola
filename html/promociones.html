@@ -4,17 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reventa de Bombillas - Promociones</title>
-  <link rel="stylesheet" href="../css/styleproducto.css">
+  <link rel="stylesheet" href="../css/style.css">
   <!-- Fuente Google Fonts -->
+  <link rel="shortcut icon" href="../img/icono.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+      .countdown {
+          background: white;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          text-align: center;
+          margin: 20px auto;
+          max-width: 300px;
+      }
+      .time {
+          font-size: 2em;
+          font-weight: bold;
+      }
+  </style>
 </head>
 <body>
   <!-- Encabezado y navegación -->
   <header>
     <div class="logo">
-      <h1>Reventa de Bombillas - Iberdrola</h1>
+      <img src="../img/logoIber.svg" alt="Logo Iberdrola">
     </div>
     <!-- Checkbox oculto para controlar el menú lateral -->
     <input type="checkbox" id="menu-toggle">
@@ -55,18 +71,69 @@
 
   <!-- Contenido principal -->
   <main>
-    <!-- Sección de bienvenida / hero -->
+        <!-- Temporizador de cuenta regresiva -->
+        <section class="countdown">
+          <h2>Las ofertas acaban en:</h2>
+          <div class="time" id="timer"></div>
+      </section>
+
+    <!-- Sección de promociones / anuncios -->
+    <section id="promociones" class="promociones">
+          <!-- Sección de bienvenida / hero -->
     <section id="inicio" class="hero">
       <h2>¡Las mejores promociones!</h2>
-      <p>Descubre la mejor calidad y precios para iluminar tu hogar y negocio.</p>
-      <img src="img/header1.jpg" alt="Iluminación moderna">
+      <p>Ahorra energía y cuida el planeta con nuestras bombillas reutilizadas en promoción</p>
     </section>
-
+      <div class="anuncio">
+        <img src="../img/bombilla_12W.jpg" alt="Promoción Especial">
+        <div class="detalle-anuncio">
+          <h3>Promoción Especial</h3>
+          <p>Compra 3 y llévate 1 gratis. Oferta por tiempo limitado.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- Pie de página -->
-  <footer>
-    <p>&copy; 2025 Reventa de Bombillas. Todos los derechos reservados.</p>
+   <!-- Pie de página -->
+   <footer>
+    <img class="footer" src="../img/IberdrolaLanding.svg" alt="Imagen 6">
+    <p>&copy; 2025 Iberdrola Clientes S.A.U. Todos los derechos reservados.</p>
   </footer>
+
+  <script>
+      function startCountdown() {
+          let targetDate = localStorage.getItem("countdownEnd");
+          if (!targetDate) {
+              const now = new Date();
+              targetDate = new Date(now.setMonth(now.getMonth() + 2)).getTime();
+              localStorage.setItem("countdownEnd", targetDate);
+          } else {
+              targetDate = parseInt(targetDate);
+          }
+          
+          function updateTimer() {
+              const currentTime = new Date().getTime();
+              const remainingTime = targetDate - currentTime;
+  
+              if (remainingTime <= 0) {
+                  document.getElementById("timer").innerHTML = "Tiempo finalizado";
+                  clearInterval(interval);
+                  return;
+              }
+  
+              const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+              const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+              const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+              
+              document.getElementById("timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+          }
+          
+          updateTimer();
+          const interval = setInterval(updateTimer, 1000);
+      }
+  
+      startCountdown();
+  </script>
 </body>
 </html>
