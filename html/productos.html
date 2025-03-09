@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,22 +14,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 
-    <!-- Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-  
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  
+  <!-- Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
   <!-- Encabezado y navegación -->
   <header>
-      <div class="logo">
-        <img src="../img/logoIber.svg" alt="Logo Iberdrola">
-      </div>
+    <div class="logo">
+      <img src="../img/logoIber.svg" alt="Logo Iberdrola">
+    </div>
     <!-- Checkbox oculto para controlar el menú lateral -->
     <input type="checkbox" id="menu-toggle">
     <!-- Icono de menú hamburguesa / X -->
@@ -37,7 +39,7 @@
       <span></span>
       <span></span>
     </label>
-    
+
     <!-- Menú de escritorio -->
     <nav class="desktop-menu">
       <ul>
@@ -78,26 +80,25 @@
     <section id="productos" class="productos">
       <h2>Nuestros Productos</h2>
       <div class="producto-grid">
+
         <!-- Producto 1 -->
         <article class="producto">
-          <img src="../img/bombilla_05W.jpg" alt="Bombilla LED 5W">
-          <h3>Bombilla LED 5W</h3>
-          <p>Alta eficiencia y larga duración.</p>
-
-          <!-- Contenedor para los botones -->
+          <img src="../img/bombilla_03W.png" alt="Bombilla LED G9 3W">
+          <h3>Bombilla LED G9 3W</h3>
+          <p>Ideal para lámparas decorativas y de ambiente.</p>
           <div class="button-container">
             <!-- Botón para abrir el modal -->
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalProducto1">
               Más Información
             </button>
             <!-- Botón de compra -->
-            <button type="button" class="btn btn-success">
+            <button type="button" class="btn btn-success"
+              onclick="window.open('https://www.webmatel.es/bombilla-led-g9-230v-3w-plana-fria-calida-neutra', '_blank')">
               Comprar Ahora
             </button>
           </div>
-
-          <!-- Modal para el Producto 1 -->
-          <div class="modal fade" id="modalProducto1" tabindex="-1" role="dialog" aria-labelledby="modalProducto1Title" aria-hidden="true">
+          <div class="modal fade" id="modalProducto1" tabindex="-1" role="dialog" aria-labelledby="modalProducto1Title"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -107,7 +108,8 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  Esta bombilla ofrece un bajo consumo de energía, ideal para mantener tu hogar iluminado de manera económica.
+                  Esta bombilla ofrece un bajo consumo de energía, ideal para mantener tu hogar iluminado de manera
+                  económica.
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
@@ -119,24 +121,22 @@
 
         <!-- Producto 2 -->
         <article class="producto">
-          <img src="../img/bombilla_08W.jpg" alt="Bombilla LED 8W">
-          <h3>Bombilla LED 8W</h3>
-          <p>Ideal para iluminar cualquier espacio.</p>
-
-          <!-- Contenedor para los botones -->
+          <img src="../img/bombilla_05W.png" alt="Bombilla LED Vintage 5W">
+          <h3>Bombilla LED Vintage 5W</h3>
+          <p>Diseño Edison con filamento LED.</p>
           <div class="button-container">
             <!-- Botón para abrir el modal -->
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalProducto2">
               Más Información
             </button>
             <!-- Botón de compra -->
-            <button type="button" class="btn btn-success">
+            <button type="button" class="btn btn-success"
+              onclick="window.open('https://www.ovalamp.com/es/bombillas-vintage-led/1586-osram-ledvance-vintage-1906-led-big-grape-xxl-220v-5w-e27-4058075269903.html', '_blank')">
               Comprar Ahora
             </button>
           </div>
-
-          <!-- Modal para el Producto 2 -->
-          <div class="modal fade" id="modalProducto2" tabindex="-1" role="dialog" aria-labelledby="modalProducto2Title" aria-hidden="true">
+          <div class="modal fade" id="modalProducto2" tabindex="-1" role="dialog" aria-labelledby="modalProducto2Title"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -158,24 +158,22 @@
 
         <!-- Producto 3 -->
         <article class="producto">
-          <img src="../img/bombilla_08W.jpg" alt="Bombilla LED 10W">
-          <h3>Bombilla LED 10W</h3>
-          <p>Potente y eficiente.</p>
-
-          <!-- Contenedor para los botones -->
+          <img src="../img/bombilla_07W.png" alt="Bombilla LED GU10 7W">
+          <h3>Bombilla LED GU10 7W</h3>
+          <p>Perfecta para focos empotrados en techos.</p>
           <div class="button-container">
             <!-- Botón para abrir el modal -->
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalProducto3">
               Más Información
             </button>
             <!-- Botón de compra -->
-            <button type="button" class="btn btn-success">
+            <button type="button" class="btn btn-success"
+              onclick="window.open('https://www.innova-led.es/bombillas-led-y-tradicionales/dicroica-led-gu10/dicroica-led-gu10-7w-580lm-100', '_blank')">
               Comprar Ahora
             </button>
           </div>
-
-          <!-- Modal para el Producto 3 -->
-          <div class="modal fade" id="modalProducto3" tabindex="-1" role="dialog" aria-labelledby="modalProducto3Title" aria-hidden="true">
+          <div class="modal fade" id="modalProducto3" tabindex="-1" role="dialog" aria-labelledby="modalProducto3Title"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -197,18 +195,20 @@
 
         <!-- Producto 4 -->
         <article class="producto">
-          <img src="../img/bombilla_08W.jpg" alt="Bombilla LED 12W">
-          <h3>Bombilla LED 12W</h3>
-          <p>Mayor luminosidad, mayor ahorro.</p>
+          <img src="../img/bombilla_08W.png" alt="Bombilla Solar LED 8W">
+          <h3>Bombilla Solar LED 8W</h3>
+          <p>Recargable con energía solar, sin consumo eléctrico.</p>
           <div class="button-container">
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalProducto4">
               Más Información
             </button>
-            <button type="button" class="btn btn-success">
+            <button type="button" class="btn btn-success"
+              onclick="window.open('https://ledscome.com/inicio/319-bombilla-edison-vintage-bombilla-led-e27-filamento-8w-st64-bombilla-decorativa.html', '_blank')">
               Comprar Ahora
             </button>
           </div>
-          <div class="modal fade" id="modalProducto4" tabindex="-1" role="dialog" aria-labelledby="modalProducto4Title" aria-hidden="true">
+          <div class="modal fade" id="modalProducto4" tabindex="-1" role="dialog" aria-labelledby="modalProducto4Title"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -218,7 +218,8 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  La bombilla de 12W es ideal para salones y oficinas grandes, proporcionando una luz brillante y eficiente.
+                  La bombilla de 12W es ideal para salones y oficinas grandes, proporcionando una luz brillante y
+                  eficiente.
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
@@ -230,18 +231,20 @@
 
         <!-- Producto 5 -->
         <article class="producto">
-          <img src="../img/bombilla_08W.jpg" alt="Bombilla LED 15W">
-          <h3>Bombilla LED 15W</h3>
-          <p>Para espacios más amplios.</p>
+          <img src="../img/bombilla_09W.png" alt="Bombilla Inteligente WiFi 9W">
+          <h3>Bombilla Inteligente WiFi 9W</h3>
+          <p>Control por voz con Alexa y Google Home.</p>
           <div class="button-container">
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalProducto5">
               Más Información
             </button>
-            <button type="button" class="btn btn-success">
+            <button type="button" class="btn btn-success"
+              onclick="window.open('https://spanish.alibaba.com/product-detail/9W-WiFi-Smart-Light-Bulb-E27-1600382214065.html', '_blank')">
               Comprar Ahora
             </button>
           </div>
-          <div class="modal fade" id="modalProducto5" tabindex="-1" role="dialog" aria-labelledby="modalProducto5Title" aria-hidden="true">
+          <div class="modal fade" id="modalProducto5" tabindex="-1" role="dialog" aria-labelledby="modalProducto5Title"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -263,18 +266,20 @@
 
         <!-- Producto 6 -->
         <article class="producto">
-          <img src="../img/bombilla_08W.jpg" alt="Bombilla LED 20W">
-          <h3>Bombilla LED 20W</h3>
-          <p>Máxima luminosidad.</p>
+          <img src="../img/bombilla_12W.png" alt="Bombilla LED E27 12W">
+          <h3>Bombilla LED E27 12W</h3>
+          <p>Luz blanca fría para mayor iluminación.</p>
           <div class="button-container">
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalProducto6">
               Más Información
             </button>
-            <button type="button" class="btn btn-success">
+            <button type="button" class="btn btn-success"
+              onclick="window.open('https://ledscome.com/bombillas-led-e27/328-clar-bombilla-globo-e27-led-bombilla-vintage-e27-led-g125-filamento-bombilla-led-e27-ambar-12w-luz-calida-2500k.html', '_blank')">
               Comprar Ahora
             </button>
           </div>
-          <div class="modal fade" id="modalProducto6" tabindex="-1" role="dialog" aria-labelledby="modalProducto6Title" aria-hidden="true">
+          <div class="modal fade" id="modalProducto6" tabindex="-1" role="dialog" aria-labelledby="modalProducto6Title"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -294,112 +299,112 @@
           </div>
         </article>
 
-<!-- Producto 7 -->
-<article class="producto">
-  <img src="../img/bombilla_08W.jpg" alt="Bombilla LED 20W">
-  <h3>Bombilla LED 20W</h3>
-  <p>Máxima luminosidad.</p>
-  <div class="button-container">
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalProducto6">
-      Más Información
-    </button>
-    <button type="button" class="btn btn-success">
-      Comprar Ahora
-    </button>
-  </div>
-  <div class="modal fade" id="modalProducto6" tabindex="-1" role="dialog" aria-labelledby="modalProducto6Title" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modalProducto6Title">Bombilla LED 20W</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          Bombilla de 20W con tecnología LED para espacios muy grandes, con una gran eficiencia energética.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
+        <!-- Producto 7 -->
+        <article class="producto">
+          <img src="../img/bombilla_15W.png" alt="Bombilla CFL E14 15W">
+          <h3>Bombilla CFL E14 15W</h3>
+          <p>Bajo consumo con rosca fina.</p>
+          <div class="button-container">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalProducto6">
+              Más Información
+            </button>
+            <button type="button" class="btn btn-success"
+              onclick="window.open('https://www.leroymerlin.es/productos/bombilla-halogena-para-horno-lexman-e14-15w-80-lm-82854378.html', '_blank')">
+              Comprar Ahora
+            </button>
+          </div>
+          <div class="modal fade" id="modalProducto6" tabindex="-1" role="dialog" aria-labelledby="modalProducto6Title"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalProducto6Title">Bombilla LED 20W</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Bombilla de 20W con tecnología LED para espacios muy grandes, con una gran eficiencia energética.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
 
+        <!-- Producto 8 -->
+        <article class="producto">
+          <img src="../img/bombilla_18W.png" alt="Bombilla LED Panel 18W">
+          <h3>Bombilla LED Panel 18W</h3>
+          <p>Uso recomendado en oficinas y comercios.</p>
+          <div class="button-container">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalProducto6">
+              Más Información
+            </button>
+            <button type="button" class="btn btn-success"
+              onclick="window.open('https://ilumax.com.co/producto/panel-led-18w-redondo-luz-blanca/', '_blank')">
+              Comprar Ahora
+            </button>
+          </div>
+          <div class="modal fade" id="modalProducto6" tabindex="-1" role="dialog" aria-labelledby="modalProducto6Title"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalProducto6Title">Bombilla LED 20W</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Bombilla de 20W con tecnología LED para espacios muy grandes, con una gran eficiencia energética.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
 
-
-<!-- Producto 8 -->
-<article class="producto">
-  <img src="../img/bombilla_20W.jpg" alt="Bombilla LED 20W">
-  <h3>Bombilla LED 20W</h3>
-  <p>Máxima luminosidad.</p>
-  <div class="button-container">
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalProducto6">
-      Más Información
-    </button>
-    <button type="button" class="btn btn-success">
-      Comprar Ahora
-    </button>
-  </div>
-  <div class="modal fade" id="modalProducto6" tabindex="-1" role="dialog" aria-labelledby="modalProducto6Title" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modalProducto6Title">Bombilla LED 20W</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          Bombilla de 20W con tecnología LED para espacios muy grandes, con una gran eficiencia energética.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-
-
-
-<!-- Producto 9 -->
-<article class="producto">
-  <img src="../img/bombilla_20W.jpg" alt="Bombilla LED 20W">
-  <h3>Bombilla LED 20W</h3>
-  <p>Máxima luminosidad.</p>
-  <div class="button-container">
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalProducto6">
-      Más Información
-    </button>
-    <button type="button" class="btn btn-success">
-      Comprar Ahora
-    </button>
-  </div>
-  <div class="modal fade" id="modalProducto6" tabindex="-1" role="dialog" aria-labelledby="modalProducto6Title" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modalProducto6Title">Bombilla LED 20W</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          Bombilla de 20W con tecnología LED para espacios muy grandes, con una gran eficiencia energética.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-
+        <!-- Producto 9 -->
+        <article class="producto">
+          <img src="../img/bombilla_20W.png" alt="Bombilla LED E27 20W">
+          <h3>Bombilla LED E27 20W</h3>
+          <p>Alto brillo para exteriores y grandes espacios.</p>
+          <div class="button-container">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalProducto6">
+              Más Información
+            </button>
+            <button type="button" class="btn btn-success"
+              onclick="window.open('https://prendeluz.com/led-a67-e27-20w-luz-fria-20w', '_blank')">
+              Comprar Ahora
+            </button>
+          </div>
+          <div class="modal fade" id="modalProducto6" tabindex="-1" role="dialog" aria-labelledby="modalProducto6Title"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalProducto6Title">Bombilla LED 20W</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Bombilla de 20W con tecnología LED para espacios muy grandes, con una gran eficiencia energética.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
-
   </main>
 
   <!-- Pie de página -->
@@ -411,11 +416,11 @@
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const modal = document.getElementById("miModal"); // Asegúrate de poner el ID correcto
-  
+
       modal.addEventListener("hide.bs.modal", function (event) {
         event.preventDefault(); // Evita el cierre inmediato
         modal.classList.add("modal-closing"); // Agrega la clase de cierre
-  
+
         setTimeout(() => {
           modal.classList.remove("modal-closing");
           bootstrap.Modal.getInstance(modal).hide(); // Ahora sí cierra el modal
@@ -423,7 +428,5 @@
       });
     });
   </script>
-  
-
 </body>
 </html>
