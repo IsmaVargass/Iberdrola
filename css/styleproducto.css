@@ -152,6 +152,11 @@ header {
   margin-bottom: 20px;
 }
 
+.button-container {
+  display: flex;
+  gap: 4px;
+}
+
 /* Grid para productos */
 .producto-grid {
   display: flex;
