@@ -124,12 +124,19 @@ header {
   font-weight: bold;
 }
 
+
+
+
 /* Alerta de ofertas */
 #alerta {
   background: #003f2a;
   color: #f4f4f4;
   text-align: center;
   padding: 10px;
+}
+
+#alerta p {
+  margin-bottom: 0px;
 }
 
 /* Sección hero */
@@ -152,8 +159,14 @@ header {
   margin-bottom: 20px;
 }
 
+.producto h3 {
+  font-size: 1.5em;
+}
+
 .button-container {
   display: flex;
+  text-align: center;
+  justify-content: center;
   gap: 4px;
 }
 
@@ -219,7 +232,7 @@ footer {
 
 footer p {
   padding-left: 10px;
-  padding-top: 12px;
+  padding-top: 20px;
 }
 
 /* Estilos responsivos */

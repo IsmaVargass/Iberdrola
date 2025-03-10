@@ -1,19 +1,20 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reventa de Bombillas - Promociones</title>
-  <link rel="stylesheet" href="../css/style.css">
-  <!-- Fuente Google Fonts -->
+  <link rel="stylesheet" href="../css/stylepromocion.css">
   <link rel="shortcut icon" href="../img/icono.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
       .countdown {
           background: white;
-          padding: 20px;
+          padding: 10px;
           border-radius: 10px;
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
           text-align: center;
@@ -24,24 +25,64 @@
           font-size: 2em;
           font-weight: bold;
       }
+      .promocion {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+          background: #f9f9f9;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+          margin-bottom: 20px;
+      }
+      .promocion img {
+          max-width: 150px;
+          border-radius: 10px;
+          background-color: #e0f8e0; /* Fondo verde claro para destacar la imagen */
+          padding: 5px;
+      }
+      .detalle-promocion {
+          flex: 2 1 400px;
+          text-align: center;
+      }
+      .detalle-promocion button {
+          background: #00a444;
+          color: white;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 16px;
+      }
+      .detalle-promocion button:hover {
+          background: #007BFF;
+      }
+      /* Transición personalizada para los modales (entrada y salida 0,6s) */
+      .modal.fade .modal-dialog {
+          transition: transform 0.6s ease, opacity 0.6s ease;
+          transform: translate(0, -50px);
+          opacity: 0;
+      }
+      .modal.fade.show .modal-dialog {
+          transform: translate(0,0);
+          opacity: 1;
+      }
+      /* Ajuste de tamaño: modal con anchura menor y mayor altura */
+      .modal-dialog {
+          max-width: 400px;
+      }
+      .modal-content {
+          min-height: 500px; /* Aumenta la altura mínima para ver más contenido vertical */
+      }
   </style>
 </head>
 <body>
-  <!-- Encabezado y navegación -->
   <header>
     <div class="logo">
       <img src="../img/logoIber.svg" alt="Logo Iberdrola">
     </div>
-    <!-- Checkbox oculto para controlar el menú lateral -->
-    <input type="checkbox" id="menu-toggle">
-    <!-- Icono de menú hamburguesa / X -->
-    <label for="menu-toggle" class="menu-icon">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
-    
-    <!-- Menú de escritorio -->
     <nav class="desktop-menu">
       <ul>
         <li><a href="../index.html">Inicio</a></li>
@@ -52,54 +93,130 @@
     </nav>
   </header>
 
-  <!-- Menú lateral para móviles -->
-  <nav class="side-menu">
-    <ul>
-      <li><a href="../index.html">Inicio</a></li>
-      <li><a href="productos.html">Productos</a></li>
-      <li><a href="promociones.html">Promociones</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-  </nav>
-
-  <!-- Sección de alerta -->
   <section id="alerta">
     <div class="alerta">
-      <p>¡Oferta del día! Bombillas LED al 20% de descuento.</p>
+      <p>¡Oferta especial! Descuento en bombillas inteligentes por tiempo limitado.</p>
     </div>
   </section>
 
-  <!-- Contenido principal -->
   <main>
-        <!-- Temporizador de cuenta regresiva -->
-        <section class="countdown">
-          <h2>Las ofertas acaban en:</h2>
-          <div class="time" id="timer"></div>
-      </section>
-
-    <!-- Sección de promociones / anuncios -->
-    <section id="promociones" class="promociones">
-          <!-- Sección de bienvenida / hero -->
-    <section id="inicio" class="hero">
-      <h2>¡Las mejores promociones!</h2>
-      <p>Ahorra energía y cuida el planeta con nuestras bombillas reutilizadas en promoción</p>
+    <section class="countdown">
+      <h2>Las ofertas acaban en:</h2>
+      <div class="time" id="timer"></div>
     </section>
-      <div class="anuncio">
-        <img src="../img/bombilla_12W.jpg" alt="Promoción Especial">
-        <div class="detalle-anuncio">
-          <h3>Promoción Especial</h3>
-          <p>Compra 3 y llévate 1 gratis. Oferta por tiempo limitado.</p>
+
+    <section class="promociones">
+      <h2>Promociones Exclusivas</h2>
+      
+      <!-- Promoción 1: Pack 2x1 en Bombillas Solares -->
+      <div class="promocion">
+        <img src="../img/bombilla_03W.png" alt="Bombilla Solar">
+        <div class="detalle-promocion">
+          <h3>Pack 2x1 en Bombillas Solares</h3>
+          <p>Aprovecha nuestra oferta y paga solo una por la compra de dos.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#promo1Modal">
+            Más Info
+          </button>
         </div>
       </div>
+
+      <!-- Promoción 2: 30% de descuento en Bombillas LED -->
+      <div class="promocion">
+        <img src="../img/bombilla_08W.png" alt="Bombilla LED">
+        <div class="detalle-promocion">
+          <h3>30% de descuento en Bombillas LED</h3>
+          <p>Ahorra energía y dinero con nuestra oferta especial.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#promo2Modal">
+            Más Info
+          </button>
+        </div>
+      </div>
+      
+      <!-- Promoción 3: 20% de descuento en Bombillas Inteligentes -->
+      <div class="promocion">
+        <img src="../img/bombilla_09W.png" alt="Bombilla Inteligente">
+        <div class="detalle-promocion">
+          <h3>20% de descuento en Bombillas Inteligentes</h3>
+          <p>Descubre tecnología avanzada para el control de iluminación en tu hogar.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#promo3Modal">
+            Más Info
+          </button>
+        </div>
+      </div>
+      
     </section>
   </main>
 
-   <!-- Pie de página -->
-   <footer>
+  <footer>
     <img class="footer" src="../img/IberdrolaLanding.svg" alt="Imagen 6">
     <p>&copy; 2025 Iberdrola Clientes S.A.U. Todos los derechos reservados.</p>
   </footer>
 
+  <!-- Modal Promoción 1 -->
+  <div class="modal fade" id="promo1Modal" tabindex="-1" aria-labelledby="promo1ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="promo1ModalLabel">Pack 2x1 en Bombillas Solares</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <img src="../img/bombilla_03W.png" class="img-fluid mb-3" alt="Bombilla Solar">
+          <p>Estas bombillas solares aprovechan la energía natural para iluminar tus espacios exteriores. Compra 2 y solo paga 1.</p>
+          <p>Incluye garantía extendida y asistencia técnica gratuita durante 1 año.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success">Comprar Ahora</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Promoción 2 -->
+  <div class="modal fade" id="promo2Modal" tabindex="-1" aria-labelledby="promo2ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="promo2ModalLabel">30% de descuento en Bombillas LED</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <img src="../img/bombilla_08W.png" class="img-fluid mb-3" alt="Bombilla LED">
+          <p>Disfruta de una iluminación de alta eficiencia con nuestras bombillas LED. Ahorra energía y reduce tu consumo eléctrico.</p>
+          <p>Incluye opción de programación inteligente y compatibilidad con dispositivos IoT.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success">Comprar Ahora</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Promoción 3 -->
+  <div class="modal fade" id="promo3Modal" tabindex="-1" aria-labelledby="promo3ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="promo3ModalLabel">20% de descuento en Bombillas Inteligentes</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <img src="../img/bombilla_09W.png" class="img-fluid mb-3" alt="Bombilla Inteligente">
+          <p>Adquiere la última tecnología en iluminación inteligente y controla tus bombillas mediante smartphone o voz.</p>
+          <p>Aprovecha el 20% de descuento para transformar tu hogar.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success">Comprar Ahora</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS y dependencias -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
       function startCountdown() {
           let targetDate = localStorage.getItem("countdownEnd");
