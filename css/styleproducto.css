@@ -214,6 +214,67 @@ header {
   flex: 2 1 400px;
 }
 
+/* Estilos generales para la tabla */
+.table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+/* Estilo de las celdas de la tabla */
+.table th, .table td {
+  padding: 15px;
+  text-align: left;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+}
+
+/* Estilo para los encabezados de la tabla */
+.table th {
+  background-color: #003f2a; /* Color de fondo verde */
+  color: white; /* Color del texto */
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Estilo para las filas impares de la tabla */
+.table tbody tr:nth-child(odd) {
+  background-color: #f9f9f9; /* Color de fondo para filas impares */
+}
+
+/* Estilo para las filas pares de la tabla */
+.table tbody tr:nth-child(even) {
+  background-color: #ffffff; /* Color de fondo para filas pares */
+}
+
+/* Efecto de hover sobre las filas */
+.table tbody tr:hover {
+  background-color: #f1f1f1; /* Color al pasar el ratón sobre las filas */
+}
+
+/* Estilo para las celdas */
+.table td {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Estilo del contenedor de la tabla (opcional) */
+.factores-destacados {
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.factores-destacados h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #003f2a;
+  margin-bottom: 15px;
+}
+
+
+
 /* Contenedor principal */
 main {
   flex: 1;
