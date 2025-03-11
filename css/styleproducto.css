@@ -74,6 +74,10 @@ header {
   transition: all 0.3s ease;
 }
 
+.producto p {
+  font-size: small;
+}
+
 .menu-icon span:nth-child(1) { top: 0; }
 .menu-icon span:nth-child(2) { top: 10px; }
 .menu-icon span:nth-child(3) { top: 20px; }
